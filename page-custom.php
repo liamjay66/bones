@@ -10,7 +10,7 @@ Template Name: Custom Page Example
 
 				<div id="inner-content" class="wrap clearfix">
 
-						<div id="main" class="eightcol first clearfix" role="main">
+						<div id="main" class="clearfix" role="main">
 
 							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
@@ -22,7 +22,6 @@ Template Name: Custom Page Example
 									<p class="byline vcard"><?php
 										printf(__('Posted <time class="updated" datetime="%1$s" pubdate>%2$s</time> by <span class="author">%3$s</span>.', 'bonestheme'), get_the_time('Y-m-j'), get_the_time(__('F jS, Y', 'bonestheme')), bones_get_the_author_posts_link());
 									?></p>
-
 
 								</header> <!-- end article header -->
 
@@ -41,17 +40,17 @@ Template Name: Custom Page Example
 
 							<?php endwhile; else : ?>
 
-									<article id="post-not-found" class="hentry clearfix">
-											<header class="article-header">
-												<h1><?php _e("Oops, Post Not Found!", "bonestheme"); ?></h1>
-										</header>
-											<section class="entry-content">
-												<p><?php _e("Uh Oh. Something is missing. Try double checking things.", "bonestheme"); ?></p>
-										</section>
-										<footer class="article-footer">
-												<p><?php _e("This is the error message in the page-custom.php template.", "bonestheme"); ?></p>
-										</footer>
-									</article>
+								<article id="post-not-found" class="hentry clearfix">
+									<header class="article-header">
+										<h1><?php _e("Oops, Post Not Found!", "bonestheme"); ?></h1>
+									</header>
+									<section class="entry-content">
+										<p><?php _e("Uh Oh. Something is missing. Try double checking things.", "bonestheme"); ?></p>
+									</section>
+									<footer class="article-footer">
+										<p><?php _e("This is the error message in the page-custom.php template.", "bonestheme"); ?></p>
+									</footer>
+								</article>
 
 							<?php endif; ?>
 
